@@ -64,7 +64,7 @@
 									</md-list-item>
 									<md-list-item>
 										<p> Block Reward </p>
-										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} XMR</p>
+										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} ETN</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Time Found </p>
@@ -123,7 +123,7 @@
 				Track Live Stats
 			</md-button>
 		</div>
-	</div>  
+	</div>
 </form>
 
 <div layout-md="column" layout-sm="column" layout-xs="column" layout="row" flex ng-repeat="(addr,miner) in addrStats">
@@ -165,10 +165,10 @@
 				</div>
 				<div flex layout="column" layout-gt-xs="row">
 					<div flex>
-						<h4> Total Due<h2>{{miner.amtDue | toXMR | number:10}} XMR</h2></h4>
+						<h4> Total Due<h2>{{miner.amtDue | toXMR | number:10}} ETN</h2></h4>
 					</div>
 					<div flex>
-						<h4> Total Paid<h2>{{miner.amtPaid | toXMR | number:10}} XMR</h2></h4>
+						<h4> Total Paid<h2>{{miner.amtPaid | toXMR | number:10}} ETN</h2></h4>
 					</div>
 				</div>
 			</div>
@@ -216,7 +216,7 @@
 			<div flex layout="column" layout-md="row" layout-gt-md="row" class="text-right">
 				<div flex layout="column" layout-gt-xs="row">
 					<div flex>
-						
+
 					</div>
 					<div flex>
 						<h3> Valid Shares<h2>{{miner.validShares | number}} <md-icon class="valid">check</md-icon></h2></h3>
@@ -236,7 +236,7 @@
 					<input type="text" ng-model="miner.alarmLimit">
 					<md-icon class="material-icons">alarm</md-icon>
 				</md-input-container>
-			</div>  
+			</div>
 		</form>
 		<span flex></span>
 		<md-button class="md-raised md-primary" ng-click="viewPayments($event, miner, addr)">View Payments</md-button>

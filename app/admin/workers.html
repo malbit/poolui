@@ -19,8 +19,8 @@
 				<tr md-row ng-repeat="worker in pool_workers | orderBy: workersOrder">
 					<td md-cell>{{worker.hashRate | toHashRate}}</td>
 					<td md-cell>{{worker.address}}</td>
-					<td md-cell>{{worker.paid | toXMR}} XMR</td>
-					<td md-cell>{{worker.due | toXMR }} XMR</td>
+					<td md-cell>{{worker.paid | toXMR}} ETN</td>
+					<td md-cell>{{worker.due | toXMR }} ETN</td>
 					<td md-cell>{{worker.totalHashes | number }}</td>
 					<td md-cell>{{worker.goodShares | number }}</td>
 					<td md-cell>{{worker.badShares | number }}</td>
