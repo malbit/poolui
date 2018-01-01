@@ -40,10 +40,6 @@ a:active  {
  }
  
 /*** Material Styles ***/
-md-card {
-  overflow: hidden;
-  background-color: rgb(215, 215, 215);
-}
 
 .md-headline {
     font-size: 20px;
