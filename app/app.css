@@ -13,6 +13,10 @@ html, body {
   margin: 0px;
   padding: 0px;
   min-width: 360px;
+  color:#FFFFFF !important;
+}
+label {
+	color:#000000 !important;
 }
 
 a {
@@ -51,7 +55,7 @@ md-sidenav {
 }
 
 md-toolbar {
-	background-color: rgb(0, 130, 130) !important;
+	background-color: rgb(44, 55, 66) !important;
 	font-size: 14px;
 }
 
@@ -64,11 +68,12 @@ md-toolbar {
 }
 
 #main {
-  background: rgb(240, 240, 240); 
+  background: rgb(255, 255, 255); 
+  background-image:url("https://supportcryptonight.com/etn/assets/blur.jpg");
 }
 
 .maintoolbar {
-  background-color: rgb(0, 130, 130); 
+  background-color: rgb(44, 55, 66); 
   color: rgb(255, 255, 255);
  }
 
@@ -89,7 +94,7 @@ md-toolbar {
 }
 
 .md-title {
-	color: white;
+	color: #000000 !important;
 }
 
 .luck {

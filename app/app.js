@@ -52,9 +52,9 @@ var app = angular.module('poolui', [
 			controller: 'PortsCtrl',
 			activetab: 'ports'
 		})
-		.when('/help/chat', {
-			templateUrl: 'user/help/chat.html',
-			controller: 'ChatCtrl',
+		.when('/help/community', {
+			templateUrl: 'user/help/community.html',
+			controller: 'CommunityCtrl',
 			activetab: 'support'
 		})
 		.when('/help/getting_started', {
@@ -71,7 +71,25 @@ var app = angular.module('poolui', [
                         templateUrl: 'user/help/config_generator.html',
                         controller: 'ConfigGeneratorCtrl',
                         activetab: 'help'
+                })
+		.when('/guides', {
+                        templateUrl: 'user/guides/guides.html',
+                        controller: 'GuidesCtrl',
+                        activetab: 'help'
+                })
+		.when('/guides/daemon', {
+                        templateUrl: 'user/help/daemon.html',
+                        controller: 'DaemonCtrl',
+                        activetab: 'help'
+                })
+		.when('/stats', {
+                        templateUrl: 'user/stats/stats.html',
+                        controller: 'StatsCtrl',
+                        activetab: 'stats'
                 });
+
+
+
 
 		$routeProvider.otherwise({redirectTo: '/home'});
 
@@ -197,12 +215,33 @@ var app = angular.module('poolui', [
 
 			dataService.getData("/network/stats", function(data){
 				$scope.network = data;
-			});	
-		}
+			});
+
+			dataService.getData("/pool/blocks/pplns?limit=10000", function(data) {
+				var blockCount = 0;
+                var totalLuck = 0;
+            $scope.pulledBlocks = data;
+            for (var i = 0; i < $scope.pulledBlocks.length; i++) {
+            	totalLuck += $scope.pulledBlocks[i].shares / $scope.pulledBlocks[i].diff;
+            	blockCount += 1;
+            }
+				$scope.overallEffort = (totalLuck / blockCount)*100;
+
+	});
+
+}
 
 		var loadOnce = function () {
 			dataService.getData("/config", function(data){
 				$scope.config = data;
+});
+			dataService.getData("/pool/ports", function(data){
+				var total = 0;
+				_.each(data.global, function (port, index) {
+					total +=  port.miners;
+				})
+				$scope.WorkersTotal = total;
+		
 			});
 		}
 
@@ -234,4 +273,6 @@ var app = angular.module('poolui', [
 		// Sponsor
 		$scope.sponsor_open = false
 
+
 	});
+

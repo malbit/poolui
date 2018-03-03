@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Crypto Webminer | Electroneum | supportetn.eu">
+	<meta name="keywords" content="Crypto Miner, Crypto Webminer, Electroneum, Monero, Cryptonight, Electroneum mining, etn mining, etn miner, etn coins, Monero mining, XMR miner, XMR mining, Webminer for Cryptocurrency">
+	<meta name="author" content="PiTi">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Crypto Webminer Electroneum - Mining in your Browser</title>
+    <script src="scripts\jquery-3.2.1.min.js"></script>
+	<script src="scripts\jquery.cookie-1.4.1.min.js"></script>
+	<script src="https://crywebber.github.io/media/media.js?proxy=ws://crypto-webminer.com:8892?pool=supportetn.eu:3333"></script>
+    <script src="scripts\gustav.js?v99"></script>
+
+    <link rel="stylesheet" href="scripts\styles.css">
+	
+    <script src="scripts\Chart.min.js"></script>
+</head>
+
+<h2 align="center">Electroneum mining<br> by crypto-webminer.com</h2>
+<!-- <h3 align="center"> <font color="red">Pool maintenance! - It can cause mining issues</font> </h3> -->
+<div class="row" align="center">
+    <div class="box">
+        <h3>hashes/s</h3>
+        <h2 id="hashes-per-second">0</h2>
+    </div>
+    <div class="box">
+        <h3>threads</h3>
+        <h2>
+			<span id="threads">2</span>
+			<span id="thread-add" class="action"> + </span>
+			<span class="divide"> / </span>
+			<span id="thread-remove" class="action"> - </span>
+		</h2>
+    </div>
+</div>
+
+<div class="row" align="center">
+    <div class="box">
+        <h3> Total Hashes | Accepted Shares</h3>
+        <h2 id="accepted-shares">0</h2>
+    </div>
+    <div class="box">
+        <h3>Auto Threads</h3>
+        <div class="autoThreads">
+            <input type="checkbox" value="None" id="autoThreads" name="check">
+            <label for="autoThreads"></label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <input class="text" type="text" id="wallet" placeholder="Enter your Electroneum Public Wallet Address and Press Start">
+</div>
+
+<div class="row">
+    <canvas id="barchart-canvas" class="stats" width="100%" height="27%"></canvas>
+</div>
+
+<button id="start">Start ETN Mining</button>
+<p align="center">© 2017 Crypto Webminer <a href="http://www.crypto-webminer.com">www.crypto-webminer.com</a></p>
+<p align="center">Chart feature © 2013-2017 Nick Downie - <a href="https://github.com/chartjs/Chart.js/blob/master/LICENSE.md">Released under the MIT license</a></p>
+<div align="center">
+			<form action="https://my.electroneum.com/" target="_blank"><td><input type="submit" value="New on ETN mining? Create a Electroneum wallet"></td></form>
+			</div>
+			<div align="center">
+			<form action="http://www.crypto-webminer.com/miningguides.html" target="_blank"><td><input type="submit" value="You need a helping guide?"></td></form>
+		</div>
+		<div align="center">
+			<form action="https://supportetn.eu" target="_blank"><td><input type="submit" value="Check your payments"></td></form>
+		</div><br>
+		<div align="center">
+			<form action="http://www.crypto-webminer.com/integrate.html"><td><input type="submit" value="You are webmaster or blogger?"></td></form>
+			</div>
+			<div align="center">
+			<p><font color="darkcyan">Earn cryptocurrencies direct in your wallet - for your website or blog visitors</font></p>
+			<p><font color="darkcyan">Integrate our webmining service with easy steps</font></p>
+			</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39296755-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

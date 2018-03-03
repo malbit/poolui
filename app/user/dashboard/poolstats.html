@@ -8,11 +8,19 @@
 							<md-icon class="material-icons">multiline_chart</md-icon>
 						</div>
 					</md-card-title-media>
+					<!-- <md-card-title-text>
+						<span class="md-headline">{{poolStats.global.totalHashes | number }}</span>
+						<span class="md-subhead">Lifetime Hashes Accepted</span>
+					</md-card-title-text> -->
 					<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.totalHashes | number}}</span>
-						<span class="md-subhead">Hashes Accepted</span>
+						<span class="md-headline">{{poolStats.global.roundHashes | number }}</span>
+						<span class="md-subhead">Round Hashes Accepted</span>
 					</md-card-title-text>
-				</md-card-title>
+
+					<md-card-title-text>
+						<span class="md-headline">{{((poolStats.global.roundHashes / network.difficulty)*100).toFixed(1) | number}} %</span>
+						<span class="md-subhead">Current Effort</span>
+					</md-card-title-text>
 			</md-card>
 		</div>
 		<div layout="column" flex>
@@ -23,14 +31,34 @@
 							<md-icon class="material-icons">widgets</md-icon>
 						</div>
 					</md-card-title-media>
-					<md-card-title-text>
+<md-card-title-text>
+						<div class="md-headline">{{poolStats.global.totalBlocksFound}}</div>
+						<div class="md-subhead">Blocks Found</span>
+						<md-divider md-inset></md-divider>
+						<a href="#/blocks"><span am-time-ago="poolStats.global.lastBlockFoundTime*1000"></span>
+						<md-tooltip md-direction="bottom">
+						    {{poolStats.global.lastBlockFoundTime*1000 | date:'hh:mm:ss dd/MM/yy'}}
+						</md-tooltip>
+						</a>
+						</div>
+					</md-card-title-text>					
+<!--<md-card-title-text>
 						<div class="md-headline">{{poolStats.global.totalBlocksFound}}</div>
 						<div class="md-subhead">
-							<span>Blocks Found (<span am-time-ago="poolStats.global.lastBlockFoundTime*1000"></span>)
+							<span>Blocks Found</span>
 							<md-tooltip md-direction="bottom">
 						    	{{poolStats.global.lastBlockFoundTime*1000 | date:'HH:mm:ss dd/MM/yy'}}
 						     </md-tooltip>
 						</div>
+					</md-card-title-text> -->
+					<md-card-title-text>
+					<span class="md-headline">{{ network.difficulty/poolStats.global.hashRate | convertedTime | date:'HH:mm' }}</span>
+					<div class="md-subhead">
+					<span>Est Time Per Block</span>
+					<md-tooltip md-direction="bottom">
+						    	Estimated
+						     </md-tooltip>
+					</div>
 					</md-card-title-text>
 				</md-card-title>
 			</md-card>
@@ -46,9 +74,16 @@
 						</div>
 					</md-card-title-media>
 					<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.miners}}</span>
-						<span class="md-subhead">Miners Connected</span>
+						<span class="md-headline">{{((poolStats.global.hashRate / (network.difficulty / 60))*100).toFixed(2) | number }}%</span>
+						<span class="md-subhead">of ETN Network</span>
 					</md-card-title-text>
+
+					<md-card-title-text>
+						<span class="md-headline">{{overallEffort | number:2 }}%</span>
+						<span class="md-subhead">Overall Luck</span>
+					</md-card-title-text>
+					
+					
 				</md-card-title>
 			</md-card>
 		</div>
@@ -60,13 +95,28 @@
 							<md-icon class="material-icons">attach_money</md-icon>
 						</div>
 					</md-card-title-media>
+<md-card-title-text>
+						<span class="md-headline">{{poolStats.global.miners}}</span>
+						<span class="md-subhead">Miners Connected</span>
+						<md-divider md-inset></md-divider>
+						<span class="md-subhead"><a href="#/ports">{{WorkersTotal | number}} Connections Total</a></span>
+					</md-card-title-text>
+					<!--<md-card-title-text>
+						<span class="md-headline">{{poolStats.global.miners}}</span>
+						<span class="md-subhead">Miners Connected</span>
+					</md-card-title-text> -->
 					<md-card-title-text>
 						<span class="md-headline">{{poolStats.global.totalMinersPaid}}</span>
-						<span class="md-subhead">Miners Paid <a href="#/payments">({{poolStats.global.totalPayments}} Payments)</a></span>
-					</md-card-title-text>
 
+						<span class="md-subhead">Miners Paid <a href="#/payments"><md-divider md-inset></md-divider>
+({{poolStats.global.totalPayments}} Payments)</a></span>
+</md-card-title-text>
 				</md-card-title>
 			</md-card>
 		</div>
+			
+					
+		</div>
+
 	</div>
 </div>
