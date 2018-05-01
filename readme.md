@@ -39,7 +39,5 @@ $ npm install # runs everything, serve from ./build
 * I'm usually on supportaeon.com so drop me a line if you need help with something or have a feature request.
 
 #### Coffee :P ?
-#XMR
-4AYuDc4cEqxfxVTUFwVqPd4JdmKLjm9dNhTjuT6Ud5gQa564wp6cxMBWbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm3zc3jmn
-#AEON
-WmtWzE4zej7FLjctgMPk7Va7hiiESJF5xHfmb5KZaMAhHDSRU51pqTJQiVFZgRMmrga9KvqPg48EZTEVQ9qA47o52MYgiMqaw
+#GRFT
+G8hadFpRhGVL2R5spTFYqs82neoqDo8mAdLUti23EcaXas83Scc4N8HNeEcfn5nDpsPugDea4wgPKFqwr5GKHB4g82NFR2Q
