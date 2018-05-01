@@ -36,7 +36,7 @@ $ npm install # runs everything, serve from ./build
 * Miner graph colour picker
 
 ### Support
-* I'm usually on supportaeon.com so drop me a line if you need help with something or have a feature request.
+* I'm usually on https://discord.gg/ABDHycz so drop me a line if you need help with something or have a feature request.
 
 #### Coffee :P ?
 #GRFT
