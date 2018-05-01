@@ -1,122 +1,103 @@
 <div layout-gt-lg="row" layout="column" class="statsbar" flex>
-	<div layout="column" layout-gt-sm="row" flex>
-		<div layout="column" flex>
-			<md-card class="metric">
-				<md-card-title>
-					<md-card-title-media>
-						<div class="md-media-sm card-media" layout="row" layout-align="center center">
-							<md-icon class="material-icons">multiline_chart</md-icon>
-						</div>
-					</md-card-title-media>
-					<!-- <md-card-title-text>
-						<span class="md-headline">{{poolStats.global.totalHashes | number }}</span>
-						<span class="md-subhead">Lifetime Hashes Accepted</span>
-					</md-card-title-text> -->
-					<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.roundHashes | number }}</span>
-						<span class="md-subhead">Round Hashes Accepted</span>
-					</md-card-title-text>
-
-					<md-card-title-text>
-						<span class="md-headline">{{((poolStats.global.roundHashes / network.difficulty)*100).toFixed(1) | number}} %</span>
-						<span class="md-subhead">Current Effort</span>
-					</md-card-title-text>
-			</md-card>
-		</div>
-		<div layout="column" flex>
-			<md-card class="metric">
-				<md-card-title>
-					<md-card-title-media>
-						<div class="md-media-sm card-media" layout="row" layout-align="center center">
-							<md-icon class="material-icons">widgets</md-icon>
-						</div>
-					</md-card-title-media>
-<md-card-title-text>
-						<div class="md-headline">{{poolStats.global.totalBlocksFound}}</div>
-						<div class="md-subhead">Blocks Found</span>
-						<md-divider md-inset></md-divider>
-						<a href="#/blocks"><span am-time-ago="poolStats.global.lastBlockFoundTime*1000"></span>
-						<md-tooltip md-direction="bottom">
-						    {{poolStats.global.lastBlockFoundTime*1000 | date:'hh:mm:ss dd/MM/yy'}}
-						</md-tooltip>
-						</a>
-						</div>
-					</md-card-title-text>					
-<!--<md-card-title-text>
-						<div class="md-headline">{{poolStats.global.totalBlocksFound}}</div>
-						<div class="md-subhead">
-							<span>Blocks Found</span>
-							<md-tooltip md-direction="bottom">
-						    	{{poolStats.global.lastBlockFoundTime*1000 | date:'HH:mm:ss dd/MM/yy'}}
-						     </md-tooltip>
-						</div>
-					</md-card-title-text> -->
-					<md-card-title-text>
-					<span class="md-headline">{{ network.difficulty/poolStats.global.hashRate | convertedTime | date:'HH:mm' }}</span>
-					<div class="md-subhead">
-					<span>Est Time Per Block</span>
-					<md-tooltip md-direction="bottom">
-						    	Estimated
-						     </md-tooltip>
-					</div>
-					</md-card-title-text>
-				</md-card-title>
-			</md-card>
-		</div>
-	</div>
-	<div layout="column" layout-gt-sm="row" flex>
-		<div layout="column" flex>
-			<md-card class="metric">
-				<md-card-title>
-					<md-card-title-media>
-						<div class="md-media-sm card-media" layout="row" layout-align="center center">
-							<md-icon class="material-icons">memory</md-icon>
-						</div>
-					</md-card-title-media>
-					<md-card-title-text>
-						<span class="md-headline">{{((poolStats.global.hashRate / (network.difficulty / 60))*100).toFixed(2) | number }}%</span>
-						<span class="md-subhead">of ETN Network</span>
-					</md-card-title-text>
-
-					<md-card-title-text>
-						<span class="md-headline">{{overallEffort | number:2 }}%</span>
-						<span class="md-subhead">Overall Luck</span>
-					</md-card-title-text>
-					
-					
-				</md-card-title>
-			</md-card>
-		</div>
-		<div layout="column" flex>
-			<md-card class="metric">
-				<md-card-title>
-					<md-card-title-media>
-						<div class="md-media-sm card-media" layout="row" layout-align="center center">
-							<md-icon class="material-icons">attach_money</md-icon>
-						</div>
-					</md-card-title-media>
-<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.miners}}</span>
-						<span class="md-subhead">Miners Connected</span>
-						<md-divider md-inset></md-divider>
-						<span class="md-subhead"><a href="#/ports">{{WorkersTotal | number}} Connections Total</a></span>
-					</md-card-title-text>
-					<!--<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.miners}}</span>
-						<span class="md-subhead">Miners Connected</span>
-					</md-card-title-text> -->
-					<md-card-title-text>
-						<span class="md-headline">{{poolStats.global.totalMinersPaid}}</span>
-
-						<span class="md-subhead">Miners Paid <a href="#/payments"><md-divider md-inset></md-divider>
-({{poolStats.global.totalPayments}} Payments)</a></span>
-</md-card-title-text>
-				</md-card-title>
-			</md-card>
-		</div>
-			
-					
-		</div>
-
-	</div>
+  <div layout="column" layout-gt-sm="row" flex>
+    <div layout="column" flex>
+      <md-card class="metric metric_double">
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-sm card-media" layout="row" layout-align="center center">
+              <md-icon class="material-icons">multiline_chart</md-icon>
+            </div>
+          </md-card-title-media>
+              <md-card-title-text>
+                    <span class="md-headline">{{(poolStats.global.totalHashes/1000000000000).toFixed(3) | number}} Trillion</span>
+                    <span class="md-subhead">Hashes accepted</span>
+              </md-card-title-text> 
+              <md-card-title-text>
+                    <span class="md-headline">{{(poolStats.global.roundHashes/1000000).toFixed(1) | number }} Milion</span>
+                    <span class="md-subhead">Round hashes</span>
+              </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+    <div layout="column" flex>
+      <md-card class="metric metric_double">
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-sm card-media" layout="row" layout-align="center center">
+              <md-icon class="material-icons">widgets</md-icon>
+            </div>
+          </md-card-title-media>
+          <md-card-title-text>
+            <div class="md-headline">
+              <span>{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(2) | number}} %</span>
+            </div>
+            <div class="md-subhead">
+              <span>Current effort</span>
+            </div>
+          </md-card-title-text>
+          <md-card-title-text>
+            <div class="md-headline">
+              <span>{{(overallEffort).toFixed(2) | number}} %</span>
+            </div>
+            <div class="md-subhead">
+              <span>Overall effort</span>
+            </div>
+            <md-tooltip md-direction="top">
+              <span>24H Avg. Effort: {{(tfAverageEffort).toFixed(2) | number}} %</span><br>
+            </md-tooltip>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
+  <div layout="column" layout-gt-sm="row" flex>
+    <div layout="column" flex>
+      <md-card class="metric metric_double">
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-sm card-media" layout="row" layout-align="center center">
+              <md-icon class="material-icons">extension</md-icon>
+            </div> 
+          </md-card-title-media>
+             <md-card-title-text>
+                <div class="md-headline">
+                  {{poolStats.global.totalBlocksFound}}
+                </div>
+                <div class="md-subhead">
+                  <span>Blocks found</span>
+                </div>
+                <md-tooltip md-direction="top">
+                <span>Orphanes: {{orphaneBlocks | number}}</span><br>
+                </md-tooltip>
+              </md-card-title-text>              
+                            
+              <md-card-title-text>
+                <span class="md-headline">{{(2*network.difficulty/poolStats.global.hashRate) | convertedTime | date:'HH:mm:ss'}}</span>
+                <span class="md-subhead">PPLNS window</span>
+              </md-card-title-text> 
+        </md-card-title> 
+      </md-card>
+    </div>
+    <div layout="column" flex>
+      <md-card class="metric metric_double">
+        <md-card-title>
+          <md-card-title-media>
+            <div class="md-media-sm card-media" layout="row" layout-align="center center">
+              <md-icon class="material-icons">people</md-icon>
+            </div>
+          </md-card-title-media>
+          <md-card-title-text>
+            <span class="md-headline">{{poolStats.global.miners}}</span>
+            <span class="md-subhead">Miners connected</span>
+            <md-divider md-inset></md-divider>
+            <span class="md-subhead"><a href="#/ports">{{WorkersTotal | number}} Connections Total</a></span>
+          </md-card-title-text>
+          <md-card-title-text>
+            <span class="md-headline">{{poolStats.global.totalMinersPaid}}</span>
+            <span class="md-subhead">Miners paid <a href="#/payments"><md-divider md-inset></md-divider>({{poolStats.global.totalPayments}} Payments)</a></span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+  </div>
 </div>

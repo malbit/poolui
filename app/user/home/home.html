@@ -33,6 +33,12 @@
 			<md-card-content>
 				<md-list>
 					<md-list-item>
+						<p>SOLO Fee</p>
+						<span class="text-right">
+							{{config.solo_fee}}%
+						</span>
+					</md-list-item>
+					<md-list-item>
 						<p>PPLNS Fee</p>
 						<span class="text-right">
 							{{config.pplns_fee}}%
@@ -44,11 +50,11 @@
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum payout (Wallet)</p>
-						<p class="text-right">{{config.min_wallet_payout | toXMR}} ETN</p>
+						<p class="text-right">{{config.min_wallet_payout | toXMR}} GRFT</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Minimum payout (Exchange)</p>
-						<p class="text-right">{{config.min_exchange_payout | toXMR}} ETN</p>
+						<p class="text-right">{{config.min_exchange_payout | toXMR}} GRFT</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Block Maturity Depth</p>

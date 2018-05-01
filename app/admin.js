@@ -15,8 +15,8 @@ var app = angular.module('pooladmin', [
 	// $mdIconProvider.defaultIconSet("https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatars.svg", 128)
 	
 	$mdThemingProvider.theme('default')
-	.primaryPalette('grey')
-	.accentPalette('light-blue');
+	.primaryPalette('red')
+	.accentPalette('deep-orange');
 
 	$routeProvider
 		.when('/login', {

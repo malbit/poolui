@@ -82,7 +82,7 @@ var app = angular.module('poolui', [
                         controller: 'DaemonCtrl',
                         activetab: 'help'
                 })
-		.when('/stats', {
+			.when('/stats', {
                         templateUrl: 'user/stats/stats.html',
                         controller: 'StatsCtrl',
                         activetab: 'stats'

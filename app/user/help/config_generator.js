@@ -17,11 +17,11 @@ app.controller('ConfigGeneratorCtrl', function($scope) {
 	$scope.example_attr = {
 		'with_mail': false,
 		'with_worker_id': false,
-    'with_pool_address' : 'pool.supportetn.eu',
-    'with_custom_wallet': 'etnkLgWfr5uE8MZSZpsabb6HjG8Mig9qaS4wQ6Hu2VVKTiJT9Ucdrzz9CqGF9tycaWbntrSRr1CwVJDqGYPtumL72GhXwtoPvs',
+    'with_pool_address' : 'pool.graft.pw',
+    'with_custom_wallet': 'G8hadFpRhGVL2R5spTFYqs82neoqDo8mAdLUti23EcaXas83Scc4N8HNeEcfn5nDpsPugDea4wgPKFqwr5GKHB4g82NFR2Q',
     'with_custom_worker': 'MyWorker',
     'with_custom_email': 'me@email.com',
-    'with_custom_port': '3333',    
+    'with_custom_port': '3300',    
 	}
 
 

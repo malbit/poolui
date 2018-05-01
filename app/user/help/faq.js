@@ -18,16 +18,16 @@ app.controller('FAQCtrl', function($scope, $location, $anchorScroll, $sce, dataS
     $scope.faq = {
         "General" : [
         {
-            title: "What is Monero?",
-            answer: $sce.trustAsHtml("Monero is a cryptocurrency that promises untraceability and privacy. It accomplishes this by obfuscating and encrypting transactions beyond recognition, while allowing you to discreetly view and manage your assets. You can also prove your transactions to a third party if necessary.<br/>"),
+            title: "What is Graft?",
+            answer: $sce.trustAsHtml("GRAFT Blockchain enables using any cryptocurrency at the Point of Sale. Natively"),
             media:
             // {
             //     "title": "Simple",
-            //     "url": $sce.trustAsResourceUrl("https://www.youtube.com/embed/TZi9xx6aiuY?ecver=1")
+            //     "url": $sce.trustAsResourceUrl("m/embed/TZi9xx6aiuY?ecver=1")
             // }
             {
-                "title": "Monero essentials video",
-                "url": $sce.trustAsResourceUrl("https://www.youtube.com/embed/6DQb0cMvU7I?ecver=1")
+                "title": "Graft essentials video",
+                "url": $sce.trustAsResourceUrl("https://www.youtube.com/embed/hdacgxgFX14")
             }
         },
 
@@ -37,7 +37,7 @@ app.controller('FAQCtrl', function($scope, $location, $anchorScroll, $sce, dataS
         },
         {
             title: "How do I start mining?",
-            answer: $sce.trustAsHtml("You can start mining today if you have a computer that sits idle. Monero can be mined on CPUs, GPU's or even a raspberry PI. To start mining you need to find the right mining software for your hardware and get going.<br/><br/>Read <a hred='#/help/getting_started'>Getting Started</a> for more details.")
+            answer: $sce.trustAsHtml("You can start mining today if you have a computer that sits idle. Monero can be mined on CPUs, GPU's or even a raspberry PI. To start mining you need to find the right mining software for your hardware and get going.<br/><br/>Read <a href='#/help/getting_started'>Getting Started</a> for more details.")
         },
         {
             title: "What is pool mining?",
@@ -63,15 +63,15 @@ app.controller('FAQCtrl', function($scope, $location, $anchorScroll, $sce, dataS
         },
         {
             title: "Payout thresholds?",
-            answer: $sce.trustAsHtml("Payout threshold is the minimum amount that needs to be earned before the pool pays out to your wallet. Since transactions in Monero have a significant miner fees, it's cost effective to set a higher payout threshold for your pool. The minimum value for this is usually 0.3 ETN.<br/><br/>To change your payment threshold, click the wrench after you login via \"Login\" button on the top right.<br/><br/>You could also adjust your payout threshold to regulate your payout schedule etc daily/weekly etc depending on your hash rate.")
+            answer: $sce.trustAsHtml("Payout threshold is the minimum amount that needs to be earned before the pool pays out to your wallet. Since transactions in Monero have a significant miner fees, it's cost effective to set a higher payout threshold for your pool. The minimum value for this is usually 10 GRFT.<br/><br/>To change your payment threshold, click the wrench after you login via \"Login\" button on the top right.<br/><br/>You could also adjust your payout threshold to regulate your payout schedule etc daily/weekly etc depending on your hash rate.")
         },
         {
             title: "Getting paid in BTC",
-            answer: $sce.trustAsHtml("nodejs-pool supports direct payments to btc. This is done by using the shapeshift API to convert your ETN and send them to a BTC wallet.<br/><br/>To configure BTC payments please have a look at <a href='#/help/getting_started'>Getting Started</a> command line samples.")
+            answer: $sce.trustAsHtml("nodejs-pool supports direct payments to btc. This is done by using the shapeshift API to convert your GRFT and send them to a BTC wallet.<br/><br/>To configure BTC payments please have a look at <a href='#/help/getting_started'>Getting Started</a> command line samples.")
         },
         {
             title: "Payments to exchanges/markets?",
-            answer: $sce.trustAsHtml("Direct payment to exchange / pool wallets are supported. The only primary difference when using this method is that the minimum payout threshold is higher and usually a defaults to 3XMR.")
+            answer: $sce.trustAsHtml("Direct payment to exchange / pool wallets are supported. The only primary difference when using this method is that the minimum payout threshold is higher and usually a defaults to 100GRFT.")
         },
         {
             title: "IP Banning?",
@@ -89,21 +89,11 @@ app.controller('FAQCtrl', function($scope, $location, $anchorScroll, $sce, dataS
         "Mining":[
         {
             title: "Hardware?",
-            answer: $sce.trustAsHtml("Monero is an AISC resistant cryptocurrency, that means it should be cost prohibitive to mine monero with an FGPA/AISC allowing desktop grade hardware to keep its share in the network hashrate and earnings.<br/><br/><a href='http://monerobechmarks.byethost5.com/' target='_new'>http://monerobechmarks.byethost5.com/</a> is a list of community collected hashrate results ordered by hardware, but be careful as some entries may not be accurate.")
+            answer: $sce.trustAsHtml("Graft is an AISC resistant cryptocurrency, that means it should be cost prohibitive to mine monero with an FGPA/AISC allowing desktop grade hardware to keep its share in the network hashrate and earnings.<br/><br/><a href='http://monerobenchmarks.info/' target='_new'>Monero Benchmark</a> is a list of community collected hashrate results ordered by hardware, but be careful as some entries may not be accurate.")
         },
         {
             title: "Software?",
             answer: $sce.trustAsHtml("Read -- <a href='#/help/getting_started'>Getting Started</a>.")
-        }
-        ],
-        "Support":[
-        {
-            title: "Chat Support",
-            answer: $sce.trustAsHtml("Monero is an AISC resistant cryptocurrency, that means it should be cost prohibitive to mine monero with an FGPA/AISC allowing desktop grade hardware to keep its share in the network hashrate and earnings.<br/><br/><a href='http://monerobechmarks.byethost5.com/' target='_new'>http://monerobechmarks.byethost5.com/</a> is a list of community collected hashrate results ordered by hardware, but be careful as some entries may not be accurate.")
-        },
-        {
-            title: "Interesting links.",
-            answer: $sce.trustAsHtml("<a href='http://reddit.com/r/moneromining' target='_new'>http://reddit.com/r/moneromining/</a><br/><a href='http://monero.stackexchange.com/' target='_new'>http://monero.stackexchange.com/</a>")
         }
         ]
     }

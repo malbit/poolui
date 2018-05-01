@@ -15,9 +15,12 @@
 			          <label>Choose your hardware</label>
 			          <md-icon class="material-icons">computer</md-icon>
 			          <md-select name="type" ng-model="example_attr['with_custom_port']" ng-change="updateExample()" required="">
-			            <md-option value="3333">Port 3333 (Low-End CPUs)</md-option>
-			            <md-option value="5555">Port 5555 (Fast CPUs)</md-option>
-			            <md-option value="7777">Port 7777 (GPU rigs)</md-option>
+			            <md-option value="3300">Port 3300 Low-End Hardware (Up to 30-40 h/s)</md-option>
+			            <md-option value="3301">Port 3301 Medium-Range Hardware (Up to 160 h/s)</md-option>
+			            <md-option value="3302">Port 3302 High-End Hardware (Anything else!)</md-option>
+				    <md-option value="3303">Port 3303 Claymore SSL</md-option>
+				    <md-option value="6666">Port 6666 SOLO Mining</md-option>
+			 	    <md-option value="9999">Port 9999 Cloud Mining / NiceHash</md-option>
 			          </md-select>
 			        </md-input-container>
 
@@ -54,15 +57,16 @@
 			        </div>
 			</div>
 
-			<h3>Example configuration for <a href="https://github.com/fireice-uk/xmr-stak-cpu/releases" target="_blank">ETN-STAK-CPU</a>, <a href="https://github.com/fireice-uk/xmr-stak-amd/releases" target="_blank">ETN-STAK-AMD</a>, <a href="https://github.com/fireice-uk/xmr-stak-nvidia/releases" target="_blank">ETN-STAK-NVIDIA</a>:</h3>
+			<h3>Example configuration for <a href="https://github.com/fireice-uk/xmr-stak/releases" target="_blank">XMR-STAK</a> Suggested version 2.4.2:</h3>
 			<div class="md-body-1 code-snippet" layout='row' flex>
 					<code class='code-snippet'>
 						"pool_address": "{{ example_config['pool_address'] }}",</br>
 						"wallet_address": "{{ example_config['username'] }}",</br>
 						"pool_password": "{{ example_config['password'] }}",</br>
+            "currency" : "monero7",</br>
 					</code>
 			</div>
-			<h3>Example configuration for <a href="https://github.com/xmrig/xmrig/releases" target="_blank">XMRIG</a>, <a href="https://github.com/xmrig/xmrig-nvidia/releases" target="_blank">XMRIG-NVIDIA</a>:</h3>
+			<h3>Example configuration for <a href="https://github.com/xmrig/xmrig/releases" target="_blank">XMRIG</a>, <a href="https://github.com/xmrig/xmrig-nvidia/releases" target="_blank">XMRIG-NVIDIA</a>, <a href="https://github.com/xmrig/xmrig-amd/releases" target"_blank">XMRIG-AMD</a> Suggested version 2.5.2:</h3>
 			<div class="md-body-1 code-snippet" layout='row' flex>
 					<code class='code-snippet'>
 						"url": "{{ example_config['pool_address'] }}",</br>
@@ -70,6 +74,7 @@
 						"pass": "{{ example_config['password'] }}",</br>
             "keepalive": true,</br>
             "nicehash": false</br>
+            "variant": 1</br>
 					</code>
 			</div>
 			<h3>Example configuration for <a href="https://bitcointalk.org/index.php?topic=638915.0" target="_blank">Claymore's CryptoNote GPU Miner</a>:</h3>
@@ -78,7 +83,9 @@
           -o stratum+tcp://{{ example_config['pool_address'] }}</br>
           -u {{ example_config['username'] }}</br>
           -p {{ example_config['password'] }}</br>
-					</code></br></br>*For SSL use stratum+ssl://
+          -pow7 1 <-- to activate PoW v7 Hashing Algo</br>
+					</br>*For SSL use stratum+ssl://
+          </code>
 			</div>
       <br>
 </md-card-content>

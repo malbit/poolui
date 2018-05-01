@@ -10,15 +10,15 @@
 				<md-list flex>
 					<md-list-item>
 						<h3> Owed </h3>
-						<p class="text-right">{{stats.owed | toXMR | number }} ETN</p>
+						<p class="text-right">{{stats.owed | toXMR | number }} GRFT</p>
 					</md-list-item>
 					<md-list-item>
 						<h3> Paid </h3>
-						<p class="text-right">{{stats.paid | toXMR | number }} ETN</p>
+						<p class="text-right">{{stats.paid | toXMR | number }} GRFT</p>
 					</md-list-item>
 					<md-list-item>
 						<h3> Mined </h3>
-						<p class="text-right">{{stats.mined | toXMR | number}} ETN</p>
+						<p class="text-right">{{stats.mined | toXMR | number}} GRFT</p>
 					</md-list-item>
 					<md-list-item>
 						<h3> Shares </h3>
@@ -45,12 +45,12 @@
 							<h4> Height<h2>{{ pool_wallet.height | number }}</h2></h4>
 						</div>
 						<div flex>
-							<h4> Unlocked<h2>{{ pool_wallet.unlocked | toXMR }} ETN</h2></h4>
+							<h4> Unlocked<h2>{{ pool_wallet.unlocked | toXMR }} GRFT</h2></h4>
 						</div>
 					</div>
 					<div flex layout="column" layout-gt-xs="row">
 						<div flex>
-							<h4> Balance<h2>{{ pool_wallet.balance | toXMR }} ETN</h2></h4>
+							<h4> Balance<h2>{{ pool_wallet.balance | toXMR }} GRFT</h2></h4>
 						</div>
 						<div flex>
 							<h4> Timestamp<h2>{{ pool_wallet.ts | date }}</h2></h4>
@@ -68,16 +68,16 @@
 							<thead md-head>
 								<tr md-row>
 									<th md-column><h2 class="md-subhead">Height</h2></th>
+									<th md-column><h2 class="md-subhead">Balance</h2></th>
 									<th md-column><h2 class="md-subhead">Unlocked</h2></th>
-									<th md-column><h2 class="md-subhead">Balanced</h2></th>
 									<th md-column><h2 class="md-subhead">Timestamp</h2></th>
 								</tr>
 							</thead>
 							<tbody md-body>
 								<tr md-row ng-repeat="history in pool_wallet_history">
 									<td md-cell><p class="md-body-2">{{history.height | number}}</p></td>
-									<td md-cell><p class="md-body-2">{{history.balance | toXMR }} ETN</p></td>
-									<td md-cell><p class="md-body-2">{{history.unlocked | toXMR }} ETN</p></td>
+									<td md-cell><p class="md-body-2">{{history.balance | toXMR }} GRFT</p></td>
+									<td md-cell><p class="md-body-2">{{history.unlocked | toXMR }} GRFT</p></td>
 									<td md-cell>
 										<h3 class="md-body-2" am-time-ago="history.ts"></h3>
 										<md-tooltip>
@@ -88,7 +88,7 @@
 							</tbody>
 						</table>
 					</md-table-container>
-				<!-- <md-table-pagination md-limit="options.limit" md-limit-options="[10, 20, 30]" md-page="options.page" md-total="{{poolStats.global.totalPayments}}" md-on-paginate="loadPayments" md-page-select></md-table-pagination> -->
+			<!--	 <md-table-pagination md-limit="options.limit" md-limit-options="[10, 20, 30]" md-page="options.page" md-total="{{poolStats.global.totalPayments}}" md-on-paginate="loadPayments" md-page-select></md-table-pagination> -->
 				</md-content>
 			</md-card-content>
 		</md-card>
@@ -97,7 +97,7 @@
 
 
 
-<!-- 	<md-table-pagination md-limit="options.limit" md-limit-options="[15, 30, 50]" md-page="options.page" md-total="{{miner.txnCount}}" md-on-paginate="loadPayments" md-page-select></md-table-pagination>
+<!--	<md-table-pagination md-limit="options.limit" md-limit-options="[15, 30, 50]" md-page="options.page" md-total="{{miner.txnCount}}" md-on-paginate="loadPayments" md-page-select></md-table-pagination>
 	<md-table-container>
 		<table md-table md-row-select ng-model="selected" md-progress="promise">
 			<thead md-head>

@@ -13,7 +13,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   min-width: 360px;
-  color:#FFFFFF !important;
+  color:rgb(215, 215, 215) !important;
 }
 label {
 	color:#000000 !important;
@@ -25,8 +25,8 @@ a {
 }
 
 a:link { text-decoration: none; },
-a:visited { color: rgb(255, 160, 0); } 
-a:hover   { color: rgb(255, 160, 0); }
+a:visited { color: rgb(255,0,0); } 
+a:hover   { color: rgb(255,0,0); }
 a:active  {
   transition: color .3s;
   color: rgb(204, 122, 0);
@@ -39,11 +39,15 @@ a:active  {
  
  .footer {
 	 text-align: center;
-	 font-size: 90%;
+	 font-size: 50%;
 	 padding-bottom: 40px;
  }
  
 /*** Material Styles ***/
+
+md-card {
+  background-color: rgb(215, 215, 215);
+}
 
 .md-headline {
     font-size: 20px;
@@ -55,8 +59,8 @@ md-sidenav {
 }
 
 md-toolbar {
-	background-color: rgb(44, 55, 66) !important;
-	font-size: 14px;
+	background-color: rgb(65,105,225) !important;
+	font-size: 16px;
 }
 
 .md-button {
@@ -64,16 +68,16 @@ md-toolbar {
 }
 
 .material-icons {
-	color: rgb(255, 160, 0);
+	color: rgb(255,0,0);
 }
 
 #main {
-  background: rgb(255, 255, 255); 
-  background-image:url("https://supportcryptonight.com/etn/assets/blur.jpg");
+  background: rgb(255,255,255); 
+ 
 }
 
 .maintoolbar {
-  background-color: rgb(44, 55, 66); 
+  background-color: rgb(65,105,225); 
   color: rgb(255, 255, 255);
  }
 
@@ -116,7 +120,7 @@ md-tooltip .md-content {
 }
 
 .sidenav {
-  background-color: rgb(44,55,66);
+  background-color: rgb(65,105,225);
 }
 
 .sidenav ul{
@@ -251,7 +255,7 @@ md-tooltip .md-content {
   -webkit-transform: scale(0.60);
   -moz-transform:scale(0.60);
   font-size: 64px !important;
-  color: rgb(255, 160, 0);
+  color: rgb(255,160,0);
 }
 
 .valid {
